@@ -2,6 +2,8 @@
 # Autores:
 # Michel Silva
 
+# data: 16/08/2022
+
 import math # Importa a biblioteca math para usar o método sqrt
 
 # segundo grau
