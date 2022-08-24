@@ -32,3 +32,17 @@ class Equacao:
         else: # se o grau for maior que 1, o expoente é x^grau
             simbolo = "x^"+str(grau)
         return simbolo # retorna o simbolo x ou x^grau
+
+    for i in range(0, grau + 1):
+      indc = self.indices[i]
+      # nada precisa ser feito se indice é 0:
+      if abs(indc) == 1 and i < grau:
+        # 1 na frente de x não deve ocorrer, por exemplo, x em vez de 1x
+        # mas precisamos do sinal do mais ou de menos:
+        # simbol += f"{'+' if indc > 0 else '-'}{expoente(grau-i)}"
+        simbolo = simbolo + f"{'+' if indc > 0 else '-'}{expoente(grau - i)}"
+      elif indc != 0:
+        simbolo += f"{indc:+g}{expoente(grau - i)}"
+        # simbol += f"{indc}{expoente(grau-i)}"
+
+    return simbolo.lstrip('+')  # lstrip removendo qualquer simbolo da string por exemplo o '+' inicial

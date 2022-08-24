@@ -29,4 +29,3 @@ for maria in lista:
   print(f"valor[{maria}] = {p(maria)}")
 
 ################ 2 ######################
-  
